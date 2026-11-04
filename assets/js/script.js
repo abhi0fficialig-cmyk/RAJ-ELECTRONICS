@@ -146,6 +146,8 @@
       setPos(idx,false);mark();
     }
     function restart(){clearInterval(timer);if(auto&&!isStatic)timer=setInterval(function(){go(idx+1)},auto)}
+    track.addEventListener('transitionend',function(e){if(e.target===track)normalize()});
+    document.addEventListener('visibilitychange',function(){if(document.hidden)clearInterval(timer);else restart()});
     prev.addEventListener('click',function(){go(idx-1);restart()});
     next.addEventListener('click',function(){go(idx+1);restart()});
     c.addEventListener('mouseenter',function(){clearInterval(timer)});

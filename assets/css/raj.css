@@ -272,3 +272,11 @@
   .nav-toggle{width:52px;height:52px}
   .nav-toggle span{width:30px;height:3.5px}
 }
+
+/* mobile: header a little smaller */
+@media(max-width:640px){
+  .navbar .nav-inner{padding:5px 0}
+  .navbar .brand-logo{height:68px}
+  .nav-toggle{width:46px;height:46px}
+  .nav-toggle span{width:26px;height:3px}
+}
